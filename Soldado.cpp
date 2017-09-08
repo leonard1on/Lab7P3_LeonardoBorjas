@@ -37,11 +37,3 @@ void Soldado::setCiudad(string pCiudad){
 void Soldado::setEdad(int pEdad){
   edad=pEdad;
 }
-
-int Soldado::defensa(){
-  return 0;
-}
-
-int Soldado::ataque(){
-  return 0;
-}

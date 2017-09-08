@@ -20,7 +20,7 @@ string Escuadron::getNombre(){
   return nombre;
 }
 
-vector<Soldado> Escuadron::getSoldados(){
+vector<Soldado*> Escuadron::getSoldados(){
   return soldados;
 }
 
@@ -28,6 +28,22 @@ void Escuadron::setNombre(string pNombre){
   nombre=pNombre;
 }
 
-void Escuadron::setSoldados(vector<Soldado> pSoldados){
+void Escuadron::setSoldados(vector<Soldado*> pSoldados){
   soldados=pSoldados;
+}
+
+int Escuadron::getataque(){
+  int ataque=0;
+  for (int i = 0; i < soldados.size(); i++) {
+    ataque+=soldados.at(i)->ataque();
+  }
+  return ataque;
+}
+
+int Escuadron::getdefensa(){
+  int defensa=0;
+  for (int i = 0; i < soldados.size(); i++) {
+    defensa+=soldados.at(i)->defensa();
+  }
+  return defensa;
 }

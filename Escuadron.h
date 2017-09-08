@@ -11,13 +11,15 @@ using namespace std;
 class Escuadron {
 private:
   string nombre;
-  vector<Soldado> soldados;
+  vector<Soldado*> soldados;
 
 public:
   Escuadron();
   Escuadron (string);
   string getNombre();
-  vector<Soldado> getSoldados();
+  vector<Soldado*> getSoldados();
   void setNombre(string);
-  void setSoldados(vector<Soldado>);
+  void setSoldados(vector<Soldado*>);
+  int getataque();
+  int getdefensa();
 };

@@ -8,6 +8,7 @@ class Soldado{
     string nombre;
     string ciudad;
     int edad;
+
   public:
     Soldado();
     Soldado(string, string, int);
@@ -18,7 +19,7 @@ class Soldado{
     void setCiudad(string);
     void setEdad(int);
 
-    int virtual defensa();
-    int virtual ataque();
+    virtual int defensa()=0;
+    virtual int ataque()=0;
 
 };
