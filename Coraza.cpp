@@ -20,7 +20,7 @@ int Coraza::getLanzas(){
   return lanzas;
 }
 
-void Coraza::setArmadura(int pArmadrua){
+void Coraza::setArmadura(int pArmadura){
   armadura=pArmadura;
 }
 

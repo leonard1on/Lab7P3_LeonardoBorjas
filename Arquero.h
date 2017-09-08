@@ -1,4 +1,4 @@
-#pragma once;
+#pragma once
 #include "Soldado.h"
 #include <string>
 using namespace std;
@@ -18,4 +18,4 @@ class Arquero : public Soldado{
     double defensa();
     double ataque();
 
-}
+};

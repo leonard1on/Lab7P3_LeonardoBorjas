@@ -1,4 +1,8 @@
 #include "Escuadron.h"
+#include "Soldado.h"
+#include "Arquero.h"
+#include "Coraza.h"
+#include "Asesino.h"
 #include <vector>
 #include <string>
 
@@ -20,10 +24,10 @@ vector<Soldado> Escuadron::getSoldados(){
   return soldados;
 }
 
-void setNombre(string pNombre){
+void Escuadron::setNombre(string pNombre){
   nombre=pNombre;
 }
 
-void setSoldados(vector<Soldado> pSoldados){
+void Escuadron::setSoldados(vector<Soldado> pSoldados){
   soldados=pSoldados;
 }

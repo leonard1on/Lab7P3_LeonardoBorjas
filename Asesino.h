@@ -1,5 +1,5 @@
 #pragma once
-#include "Solado.h"
+#include "Soldado.h"
 #include <string>
 using namespace std;
 

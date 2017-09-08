@@ -32,6 +32,6 @@ double Arquero::ataque(){
   return flechas*(precision/1000);
 }
 
-double Arquero::ataque(){
+double Arquero::defensa(){
   return 0;
 }

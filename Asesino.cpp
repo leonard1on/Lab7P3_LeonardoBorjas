@@ -7,7 +7,7 @@ Asesino::Asesino(){
 
 }
 
-Asesino::Asesino(int pAsesinatos, int pDesapercibidad, string pNombre, string pCiudad, pEdad) : Soldado(pNombre, pCiudad, pEdad){
+Asesino::Asesino(int pAsesinatos, int pDesapercibidad, string pNombre, string pCiudad, int pEdad) : Soldado(pNombre, pCiudad, pEdad){
   asesinatos=pAsesinatos;
   desapercibidad=pDesapercibidad;
 }
@@ -28,10 +28,10 @@ void Asesino::setDesapercibidad(int pDesapercibidad){
   desapercibidad=pDesapercibidad;
 }
 
-double defensa(){
+double Asesino::defensa(){
   return desapercibidad*10;
 }
 
-double ataque(){
+double Asesino::ataque(){
   return asesinatos;
 }
