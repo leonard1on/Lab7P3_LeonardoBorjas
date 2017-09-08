@@ -7,7 +7,7 @@ Arquero::Arquero(){
 
 }
 
-Arquero::Arquero(int pFlechas, double pPrecision, string pNombre, string pCiudad, int pEdad) : Soldado(pNombre, pCiudad, pEdad){
+Arquero::Arquero(int pFlechas, int pPrecision, string pNombre, string pCiudad, int pEdad) : Soldado(pNombre, pCiudad, pEdad){
   flechas=pFlechas;
   precision=pPrecision;
 }
@@ -16,7 +16,7 @@ int Arquero::getFlechas(){
   return flechas;
 }
 
-double Arquero::getPrecision(){
+int Arquero::getPrecision(){
   return precision;
 }
 
@@ -24,14 +24,14 @@ void Arquero::setFlechas(int pFlechas){
   flechas=pFlechas;
 }
 
-void Arquero::setPrecision(double pPrecision){
+void Arquero::setPrecision(int pPrecision){
   precision=pPrecision;
 }
 
-double Arquero::ataque(){
+int Arquero::ataque(){
   return flechas*(precision/1000);
 }
 
-double Arquero::defensa(){
+int Arquero::defensa(){
   return 0;
 }

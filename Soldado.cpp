@@ -38,10 +38,10 @@ void Soldado::setEdad(int pEdad){
   edad=pEdad;
 }
 
-double Soldado::defensa(){
+int Soldado::defensa(){
   return 0;
 }
 
-double Soldado::ataque(){
+int Soldado::ataque(){
   return 0;
 }

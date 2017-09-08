@@ -18,7 +18,7 @@ class Soldado{
     void setCiudad(string);
     void setEdad(int);
 
-    double virtual defensa();
-    double virtual ataque();
+    int virtual defensa();
+    int virtual ataque();
 
 };

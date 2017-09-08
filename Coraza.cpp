@@ -28,10 +28,10 @@ void Coraza::setLanzas(int pLanzas){
   lanzas=pLanzas;
 }
 
-double Coraza::defensa(){
+int Coraza::defensa(){
   return armadura;
 }
 
-double Coraza::ataque(){
+int Coraza::ataque(){
   return lanzas;
 }

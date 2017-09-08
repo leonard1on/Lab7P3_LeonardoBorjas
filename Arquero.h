@@ -9,13 +9,13 @@ class Arquero : public Soldado{
     double precision;
   public:
     Arquero();
-    Arquero(int, double, string, string, int);
+    Arquero(int, int, string, string, int);
     int getFlechas();
-    double getPrecision();
+    int getPrecision();
     void setFlechas(int);
-    void setPrecision(double);
+    void setPrecision(int);
 
-    double defensa();
-    double ataque();
+    int defensa();
+    int ataque();
 
 };

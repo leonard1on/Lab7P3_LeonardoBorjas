@@ -88,7 +88,8 @@ int main() {
       }break;
 
       case 3:{
-        int eleccion=0, ataque=0, defensa=0;
+        int eleccion=0;
+        int ataque=0, defensa=0;
         if (escuadrones.size()<4) {
           cout<<"No hay escuadrones suficientes";
         }else{ //else
@@ -124,8 +125,6 @@ int main() {
 
           Jugador1[1]=defensa;
 
-          cout<<Jugador1[1] <<Jugador1[0];//
-
         //Frontal Jugador 2
         for (int i = 0; i < escuadrones.size(); i++) {
           cout<<i <<". " <<escuadrones.at(i).getNombre()<<endl;
@@ -153,6 +152,9 @@ int main() {
         }
 
         Jugador2[1]=defensa;
+
+        cout<<"Attack" <<Jugador1[0] << "Defense" <<Jugador1[1] <<endl;
+
         if (Jugador1[0] > Jugador2[1]*10) {
           cout<<"Jugador 1 ha ganado!";
         }else if (Jugador2[0] > Jugador1[1]*10) {

@@ -16,7 +16,7 @@ public:
   void setAsesinatos(int);
   void setDesapercibidad(int);
 
-  double defensa();
-  double ataque();
+  int defensa();
+  int ataque();
 
 };
