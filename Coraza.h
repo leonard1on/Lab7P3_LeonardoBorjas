@@ -12,5 +12,7 @@ public:
   void setArmadura(int);
   void setLanzas(int);
 
+  double defensa();
+  double ataque();
 
 };

@@ -4,7 +4,7 @@
 using namespace std;
 
 Arquero::Arquero(){
-  
+
 }
 
 Arquero::Arquero(int pFlechas, double pPrecision, string pNombre, string pCiudad, int pEdad) : Soldado(pNombre, pCiudad, pEdad){
@@ -26,4 +26,12 @@ void Arquero::setFlechas(int pFlechas){
 
 void Arquero::setPrecision(double pPrecision){
   precision=pPrecision;
+}
+
+double Arquero::ataque(){
+  return flechas*(precision/1000);
+}
+
+double Arquero::ataque(){
+  return 0;
 }

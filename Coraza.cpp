@@ -24,6 +24,14 @@ void Coraza::setArmadura(int pArmadrua){
   armadura=pArmadura;
 }
 
-void Coraz::setLanzas(int pLanzas){
+void Coraza::setLanzas(int pLanzas){
   lanzas=pLanzas;
+}
+
+double Coraza::defensa(){
+  return armadura;
+}
+
+double Coraza::ataque(){
+  return lanzas;
 }

@@ -27,3 +27,11 @@ void Asesino::setAsesinatos(int pAsesinatos){
 void Asesino::setDesapercibidad(int pDesapercibidad){
   desapercibidad=pDesapercibidad;
 }
+
+double defensa(){
+  return desapercibidad*10;
+}
+
+double ataque(){
+  return asesinatos;
+}
