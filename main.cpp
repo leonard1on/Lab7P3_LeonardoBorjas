@@ -124,7 +124,7 @@ int main() {
 
           Jugador1[1]=defensa;
 
-          cout<<Jugador1[1] <<Jugador1[0];
+          cout<<Jugador1[1] <<Jugador1[0];//
 
         //Frontal Jugador 2
         for (int i = 0; i < escuadrones.size(); i++) {
