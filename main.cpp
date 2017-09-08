@@ -18,6 +18,7 @@ int main() {
     switch (opcion) {
       case 1:{
         string name;
+        vector<Soldado> soldad;
         cout<<"Cual es el nombre del Esquadron" <<endl;
         cin>>name;
         Escuadron escuadron(name);
@@ -41,7 +42,7 @@ int main() {
             cin>>cantFlechas;
             cout<<"Cual es la precision del arquero: ";
             cin>>precision;
-            escuadron.getSoldados().push_back(Arquero(cantFlechas, precision, nombre, ciudad, edad));
+            soldad.push_back(Arquero(cantFlechas, precision, nombre, ciudad, edad));
           }else if (seleccion==2) {
             int armadura=0, lanzas=0;
             do{
@@ -51,7 +52,7 @@ int main() {
 
             cout<<"Numero de lanzas: ";
             cin>>lanzas;
-            escuadron.getSoldados().push_back(Coraza(armadura, lanzas, nombre, ciudad, edad));
+            soldad.push_back(Coraza(armadura, lanzas, nombre, ciudad, edad));
           }else if (seleccion==3) {
             int asesinatos=0, desapercibidad=0;
             cout<<"Cantidad de asesinatos: ";
@@ -60,21 +61,23 @@ int main() {
               cout<<"Cual es la desapercibidad del Asesino: ";
               cin>>desapercibidad;
             } while(desapercibidad<1 || desapercibidad>10);
-            escuadron.getSoldados().push_back(Coraza(asesinatos, desapercibidad, nombre, ciudad, edad));
+            soldad.push_back(Asesino(asesinatos, desapercibidad, nombre, ciudad, edad));
           }else{
+
             cout<<"Seleccion incorrecta";
           }
 
           cout<<"Quiere agregar otro soldado? 1=Si, 2=No" <<endl;
           cin>>resp;
         } while(resp!=2);
+        escuadron.setSoldados(soldad);
         escuadrones.push_back(escuadron);
       }break;
 
       case 2:{
         int esto;
         for (int i = 0; i < escuadrones.size(); i++) {
-            cout<<i <<". " <<escuadrones.at(i).getNombre();
+            cout<<i <<". " <<escuadrones.at(i).getNombre() <<endl;
         }
         cout<<"Cual desea ver?";
         cin>>esto;
@@ -95,7 +98,7 @@ int main() {
 
           //Frontal Jugador 1
           for (int i = 0; i < escuadrones.size(); i++) {
-            cout<<i <<". " <<escuadrones.at(i).getNombre();
+            cout<<i <<". " <<escuadrones.at(i).getNombre() <<endl;
           }
           cout<<endl;
           cout<<"Jugador 1: Cual escuadron quieres en frente?: ";
@@ -109,7 +112,7 @@ int main() {
 
           //Retaguardia Jugador 1
           for (int i = 0; i < escuadrones.size(); i++) {
-            cout<<i <<". " <<escuadrones.at(i).getNombre();
+            cout<<i <<". " <<escuadrones.at(i).getNombre() <<endl;
           }
           cout<<endl;
           cout<<"Jugador 1: Cual escuadron quieres en la retaguardia?: ";
@@ -121,10 +124,11 @@ int main() {
 
           Jugador1[1]=defensa;
 
+          cout<<Jugador1[1] <<Jugador1[0];
 
         //Frontal Jugador 2
         for (int i = 0; i < escuadrones.size(); i++) {
-          cout<<i <<". " <<escuadrones.at(i).getNombre();
+          cout<<i <<". " <<escuadrones.at(i).getNombre()<<endl;
         }
         cout<<endl;
         cout<<"Jugador 2: Cual escuadron quieres en frente?: ";
@@ -136,9 +140,9 @@ int main() {
 
         Jugador2[0]=ataque;
 
-        //Retaguardia Jugador 1
+        //Retaguardia Jugador 2
         for (int i = 0; i < escuadrones.size(); i++) {
-          cout<<i <<". " <<escuadrones.at(i).getNombre();
+          cout<<i <<". " <<escuadrones.at(i).getNombre() <<endl;
         }
         cout<<endl;
         cout<<"Jugador 2: Cual escuadron quieres en la retaguardia?: ";
@@ -156,6 +160,7 @@ int main() {
         }else{
           cout<<"La batalla termina en empate";
         }
+        opcion=4;
       }//fin else
     }//fin case
 
